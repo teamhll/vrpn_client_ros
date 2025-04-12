@@ -161,7 +161,7 @@ namespace vrpn_client_ros
 
     if (pose_pub->getTopic().empty())
     {
-      *pose_pub = nh.advertise<geometry_msgs::PoseStamped>("pose", 1);
+      *pose_pub = nh.advertise<geometry_msgs::PoseStamped>("/mavros/vision_pose/pose", 1);
     }
 
     if (pose_pub->getNumSubscribers() > 0)
